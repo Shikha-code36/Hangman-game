@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="hangman">
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/app.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+  </head>
+  <body>
+
+  <div ng-cloak ng-controller="HangmanController" class="container">
+    <h1>HANGMAN</h1>
+    <div class="row">
+      <div class="col-xs-12">
+        <div word></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <div character-list></div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div hangman></div>
+      </div>
+    </div>
+
+    <div ng-if="competitionData.gameOver" class="popup-wrapper">
+      <div class="popup">
+        Sorry, you are dead!<br>The word was {{competitionData.word}}<br>
+        <button class="btn btn-success" ng-click="retry()">Retry</button>
+      </div>
+    </div>
+    <div ng-if="competitionData.win" class="popup-wrapper">
+      <div class="popup">
+        Yay, you won the game!<br>
+        <button class="btn btn-success" ng-click="retry()">Retry</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app/app.js"></script>
+
+  <script src="app/directives/character-list-directive.js"></script>
+  <script src="app/directives/hangman-directive.js"></script>
+  <script src="app/directives/word-directive.js"></script>
+
+  <script src="app/services/character-list-service.js"></script>
+  <script src="app/services/word-service.js"></script>
+
+  </body>
+</html>

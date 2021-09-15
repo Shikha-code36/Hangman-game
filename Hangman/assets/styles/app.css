@@ -1,0 +1,124 @@
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:700);		
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+h1 {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+button.btn {
+  font-family: 'Anonymous Pro', sans-serif;
+  margin-bottom: 5px;
+}
+
+.word-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.character-box {
+  float: left;
+  height: 30px;
+  width: 34px;
+  border-bottom: 2px solid black;
+  margin-right: 4px;
+  text-align: center;
+}
+
+.hangman {
+  width: 179px;
+  height: 252px;
+  background: url('../images/hangman.png') no-repeat;
+  position: relative;
+}
+
+.hangman div {
+  position: absolute;
+}
+
+.hangman .head {
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  border-radius: 50%;
+  top: 50px;
+  left: -10px;
+}
+
+.hangman .body {
+  width: 5px;
+  height: 50px;
+  background: black;
+  top: 100px;
+  left: 12px;
+}
+
+.hangman .left-arm {
+  width: 5px;
+  height: 40px;
+  background: black;
+  top: 100px;
+  left: -3px;
+  -webkit-transform: rotate(47deg);
+  -moz-transform: rotate(47deg);
+  transform: rotate(47deg);
+}
+
+.hangman .right-arm {
+  width: 5px;
+  height: 40px;
+  background: black;
+  top: 100px;
+  left: 27px;
+  -webkit-transform: rotate(-47deg);
+  -moz-transform: rotate(-47deg);
+  transform: rotate(-47deg);
+}
+
+.hangman .left-leg {
+  width: 5px;
+  height: 60px;
+  background: black;
+  top: 145px;
+  left: -1px;
+  -webkit-transform: rotate(27deg);
+  -moz-transform: rotate(27deg);
+  transform: rotate(27deg);
+}
+
+.hangman .right-leg {
+  width: 5px;
+  height: 60px;
+  background: black;
+  top: 145px;
+  left: 25px;
+  -webkit-transform: rotate(-27deg);
+  -moz-transform: rotate(-27deg);
+  transform: rotate(-27deg);
+}
+
+.popup-wrapper {
+  display: block;
+  position: absolute;
+  content: " ";
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.popup {
+  background: #6dbbff;
+  width: 400px;
+  position:absolute;
+  top: 40%;
+  left: 50%;
+  margin-left: -200px;
+  text-align: center;
+  padding: 50px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  z-index: 20;
+}

@@ -1,0 +1,5 @@
+.idea
+
+#dependencies 
+bower_components
+node_modules

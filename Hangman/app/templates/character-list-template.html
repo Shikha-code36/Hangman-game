@@ -1,0 +1,7 @@
+<span ng-repeat="character in CharacterListService.getCharacters()">
+  <button class="btn btn-default"
+          ng-class="{'btn-primary': !CharacterListService.isAlreadyTried(character), 'btn-default': CharacterListService.isAlreadyTried(character)}"
+          ng-disabled="CharacterListService.isAlreadyTried(character) || competitionData.gameOver"
+          ng-click="CharacterListService.guess(character)">{{ character | uppercase }}
+  </button>
+</span>

@@ -1,0 +1,6 @@
+<div class="word-wrapper">
+  <div ng-repeat="character in word track by $index" class="character-box">
+    <span ng-if="CharacterListService.isAlreadyTried(character)">{{character | uppercase}}</span>
+  </div>
+  <div class="clearfix"></div>
+</div>
